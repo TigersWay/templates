@@ -1,0 +1,2 @@
+# templates
+Web template collection
