@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- {{ pkg.name }} v{{ pkg.version }} | {{ "All rights reserved" if pkg.private else pkg.license }} | {{ pkg.author | safe }} -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ pkg.name }} v{{ pkg.version }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/styles.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">HEADER</div>
+  </header>
+
+  <section>
+    <main>
+      <nav>
+        <ul>
+        {%- for theme in themes %}
+          <li><a href="/{{ theme.theme }}/">{{ theme.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </main>
+  </section>
+
+  <footer>
+    <div class="container">HEADER</div>
+  </footer>
+
+  <div id="debug" style="position:fixed;top:100px;right:4px;font-family:sans-serif;font-size:12px;background:#33333380;color:#fff;padding:6px"></div>
+  <script src="js/scripts.min.js"></script>
+</body>
+</html>
