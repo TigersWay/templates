@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- {{ pkg.name }} v{{ pkg.version }} | {{ "All rights reserved" if pkg.private else pkg.license }} | {{ pkg.author | safe }} -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ pkg.name }} v{{ pkg.version }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/styles.min.css">
+  <style>
+  /* body > div {
+  }
+  .block {
+    margin: 4px;
+    padding: 6px;
+  } */
+  </style>
+</head>
+<body>
+  <img src="/images/blue-eyes.jpg" alt="" width="300">
+  <img src="/flyimages/images/blue-eyes.jpg/300x300/" alt="">
+  <div class="container">Container</div>
+  {# <div>
+    <div class="block" style="background: #f3d9fa">Simple</div>
+  </div> #}
+
+  {# <div>
+    <div class="header block" style="background: #c3fae8">Header</div>
+    <div class="block" style="background: #f3d9fa">Simple</div>
+    <div class="footer block" style="background: #ffe8cc">Footer</div>
+  </div> #}
+
+
+  {# <header>
+    <div class="container ghost-border">
+      header
+    </div>
+  </header> #}
+
+  {# <section>
+    <div class="container ghost-border">
+      {%- for index in [1, 2, 3, 4, 5, 6, 8] %}
+      <div class="pad"><div>{{ index }}</div></div>
+      {%- endfor %}
+    </div>
+  </section> #}
+
+  {# <section>
+    <div class="container ghost-border">
+      <main>Section B (Main)</main>
+      <nav>Nav</nav>
+      <aside>aside</aside>
+    </div>
+  </section> #}
+
+  {# <footer>
+    <div class="container ghost-border">
+      footer
+    </div>
+  </footer> #}
+
+  <div id="debug" style="position:fixed;top:100px;right:4px;font-family:sans-serif;font-size:12px;background:#33333380;color:#fff;padding:6px"></div>
+  <script src="js/scripts.min.js"></script>
+</body>
+</html>

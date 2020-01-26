@@ -69,6 +69,7 @@ const buildCSS = () => {
       //plugins: [new $.lessPluginLists()]
     }))
     .pipe($.nunjucks.compile({pkg: pkg}))
+    .pipe($.groupCssMediaQueries())
     .pipe($.autoprefixer())
     .pipe(dest(destPath + '/css'))
     .pipe($.cleanCss({
@@ -96,8 +97,14 @@ const buildJS = () => {
 const watchJS = () => {return watch(['src/js/**/*.js'], buildJS)}
 
 const serve = () => {
+  const flyimages = require('./src/flyimages-middleware.js')('public');
+
   return require('browser-sync').init({
     server: destPath,
+    middleware: [{
+      route: '/flyimages',
+      handle: flyimages
+    }],
     files: [
       destPath + '/**/*.html',
       destPath + '/js/*.min.js',
